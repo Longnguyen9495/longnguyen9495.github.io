@@ -20,7 +20,7 @@
       </nav>
       <div class="actions">
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối" title="Đổi giao diện">◐</button>
-      <button class="print-btn" type="button" onclick="window.print()" aria-label="In hoặc lưu CV thành PDF">↧ <span>Lưu PDF</span></button>
+      <button class="print-btn" id="printButton" type="button" aria-label="In hoặc lưu CV thành PDF">↧ <span>Lưu PDF</span></button>
       </div>
     </div>
   </header>
@@ -42,7 +42,7 @@
 
       <aside class="profile-panel reveal" aria-label="Thông tin nhanh">
         <div class="portrait">
-          <img src="Image/anhdaidien.jpg" alt="Nguyễn Thành Long đứng trên núi và cầm lá cờ Việt Nam" width="960" height="960" fetchpriority="high">
+          <img id="profileImage" src="Image/anhdaidien.jpg" alt="Nguyễn Thành Long đứng trên núi và cầm lá cờ Việt Nam" width="960" height="960" fetchpriority="high" decoding="sync">
         </div>
         <div class="status">
           <p><strong>Kinh nghiệm thực chiến</strong>Web application, ERP, CRM, bán hàng và quản trị nội bộ.</p>
