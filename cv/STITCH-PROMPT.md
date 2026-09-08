@@ -4,7 +4,7 @@ Dán toàn bộ nội dung bên dưới vào Google Stitch và chọn loại d�
 
 ---
 
-Thiết kế lại một trang CV/portfolio cá nhân dạng one-page responsive cho **Nguyễn Thành Long**, ứng tuyển vị trí **Senior Full-stack PHP Developer / Laravel Developer**. Đối tượng xem chính là HR, Engineering Manager và CTO, thường chỉ có 30-60 giây để quét CV. Giao diện phải giúp họ nhận ra ngay: ứng viên có hơn 8 năm kinh nghiệm, mạnh PHP/Laravel, từng làm hệ thống ERP/CRM/bán hàng và có năng lực làm việc full-stack.
+Thiết kế lại một trang CV/portfolio cá nhân dạng one-page responsive cho **Nguyễn Thành Long**, ứng tuyển vị trí **Senior Full-stack PHP Developer / Laravel Developer**. Đối tượng xem chính là HR, Engineering Manager và CTO, thường chỉ có 30-60 giây để quét CV. Giao diện phải giúp họ nhận ra ngay: ứng viên có hơn 8 năm kinh nghiệm, mạnh PHP/Laravel, từng làm hệ thống ERP/CRM/bán hàng, có năng lực full-stack và thành thạo ứng dụng các model AI hiện đại trong toàn bộ vòng đời phát triển phần mềm.
 
 ## Hướng sáng tạo
 
@@ -57,7 +57,7 @@ Khối trái:
 - Eyebrow duy nhất của hero: `FULL-STACK PHP DEVELOPER`.
 - Headline lớn tối đa 2 dòng: `Nguyễn Thành Long.`
 - Tô Signal Orange cho từ `Long.` nhưng không dùng gradient.
-- Mô tả ngắn: `Tôi xây dựng hệ thống web ổn định, dễ mở rộng và giải quyết những bài toán nghiệp vụ phức tạp bằng PHP, Laravel và JavaScript.`
+- Mô tả ngắn: `Tôi xây dựng hệ thống web ổn định, dễ mở rộng bằng PHP, Laravel và JavaScript, kết hợp AI hiện đại để tăng tốc toàn bộ vòng đời phát triển phần mềm.`
 - Thông tin liên hệ dạng text rõ ràng: `0963 195 861`, `thanhlong09041995@gmail.com`, `Hà Nội, Việt Nam`.
 
 Khối phải:
@@ -104,11 +104,13 @@ Công việc gần nhất chiếm diện tích lớn nhất. Hai công việc c�
 
 Tạo composition 40/60:
 - Khối Signal Orange lớn bên trái với tiêu đề `Năng lực cốt lõi.` và câu mô tả ngắn.
-- Bên phải là bento grid 4 ô không đồng đều, nhưng đúng 4 ô và không có ô trống.
+- Bên phải là bento grid 5 ô không đồng đều, đúng 5 ô và không có ô trống.
+- Ô `AI-assisted Engineering` phải có diện tích lớn nhất để trở thành điểm nhấn mới nhưng không lấn át kinh nghiệm PHP/Laravel.
 
 Nội dung:
 - `Backend`: PHP, Laravel, REST API, authentication, queue, cronjob, tích hợp hệ thống.
 - `Frontend`: HTML5, CSS3, JavaScript, jQuery, Bootstrap, Sass, Less, WordPress.
+- `AI-assisted Engineering`: Thành thạo khai thác các model AI hiện đại và AI agents để phát triển ý tưởng, nghiên cứu phương án, xây dựng plan, phản biện và kiểm định plan, coding, refactor, code review, sinh test case, kiểm thử, debug và viết tài liệu. Biết chia nhỏ context, xây dựng prompt có ràng buộc, kiểm tra chéo đầu ra giữa yêu cầu nghiệp vụ và mã nguồn. Không phụ thuộc mù quáng vào AI; luôn review thủ công về logic, kiến trúc, bảo mật, hiệu năng và độ chính xác trước khi triển khai.
 - `Data`: MySQL, MongoDB, NoSQL, Elasticsearch, Redis, Memcached.
 - `Engineering`: OOP, Design Patterns, code review, tối ưu hiệu suất, Git, GitLab, CI/CD.
 
