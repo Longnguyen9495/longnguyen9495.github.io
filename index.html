@@ -98,7 +98,7 @@
     .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 56px; font: 600 .82rem/1.3 Consolas, monospace; }
     .hero-meta a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .portrait {
-      min-height: 430px; border-radius: var(--radius); overflow: hidden; position: relative;
+      width: 100%; aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; position: relative;
       background: var(--surface-2);
     }
     .portrait img { width: 100%; height: 100%; position: absolute; inset: 0; display: block; object-fit: cover; object-position: 58% 50%; filter: saturate(.88) contrast(1.04); }
@@ -146,7 +146,6 @@
       .hero, .timeline, .skills-layout, .education { grid-template-columns: 1fr; min-height: auto; }
       .intro { min-height: auto; padding: 32px 0; }
       .profile-panel { grid-template-columns: .85fr 1.15fr; grid-template-rows: none; }
-      .portrait { min-height: 330px; }
       .job:first-child { grid-row: auto; }
       .skill-lead { min-height: auto; position: static; }
       section:not(.hero) { padding-top: 80px; }
@@ -160,7 +159,6 @@
       .summary { margin-top: 24px; }
       .hero-meta { margin-top: 30px; flex-direction: column; }
       .profile-panel, .skill-grid { grid-template-columns: 1fr; }
-      .portrait { min-height: 390px; }
       .job-head { display: block; }
       .period { display: block; margin-top: 10px; }
       .footer-inner { flex-direction: column; }
@@ -170,29 +168,48 @@
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
     @media print {
-      :root, [data-theme] { color-scheme: light; --bg: #fff; --surface: #fff; --surface-2: #f0f0ec; --ink: #111; --muted: #444; --line: #bbb; --accent: #b83c1e; --accent-ink: #fff; --shadow: none; }
-      @page { size: A4; margin: 12mm; }
-      body { font-size: 10pt; background: #fff; }
-      .topbar { display: none; }
-      main { max-width: none; padding: 0; }
-      .hero { min-height: auto; grid-template-columns: 1.55fr .45fr; gap: 8mm; }
+      :root, [data-theme] { color-scheme: light; --bg: #fff; --surface: #fff; --surface-2: #f3f3ef; --ink: #111; --muted: #3f403b; --line: #c7c7c0; --accent: #b83c1e; --accent-ink: #fff; --shadow: none; }
+      @page { size: A4 portrait; margin: 7mm; }
+      html, body { width: 100%; background: #fff !important; }
+      body { font-size: 7pt; line-height: 1.28; background-image: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .topbar, footer, .skip { display: none !important; }
+      main { width: 100%; max-width: none; padding: 0; }
+      .hero { min-height: 0; grid-template-columns: 1fr 39mm; gap: 5mm; align-items: center; }
       .intro, .profile-panel, .job, .skill, .skill-lead, .edu-main, .edu-note { box-shadow: none; break-inside: avoid; }
-      .intro { padding: 9mm; min-height: 105mm; }
-      h1 { font-size: 42pt; }
-      .summary { margin-top: 8mm; }
-      .hero-meta { margin-top: 9mm; }
-      .profile-panel { padding: 5mm; }
-      .portrait { min-height: 72mm; }
-      section:not(.hero) { padding-top: 12mm; }
-      .section-title { font-size: 26pt; margin-bottom: 6mm; }
-      .timeline { grid-template-columns: 1fr; gap: 5mm; }
-      .job { padding: 7mm; border: 1px solid var(--line); }
-      .job ul { columns: 2; column-gap: 8mm; }
-      .skills-layout { grid-template-columns: .7fr 1.3fr; }
-      .skill-lead { position: static; min-height: 0; padding: 7mm; }
-      .skill-grid { gap: 4mm; }
-      .skill { min-height: 0; padding: 6mm; }
-      footer { padding: 8mm 0 0; }
+      .intro { min-height: 0; padding: 1mm 0; }
+      .eyebrow { margin-bottom: 3mm; font-size: 7pt; }
+      h1 { font-size: 29pt; line-height: .92; }
+      .summary { max-width: 70ch; margin-top: 3mm; font-size: 8pt; }
+      .hero-meta { margin-top: 4mm; gap: 2mm 5mm; font-size: 6.5pt; }
+      .profile-panel { display: block; }
+      .portrait { width: 39mm; height: 39mm; aspect-ratio: 1; border: 1px solid var(--line); }
+      .status { margin-top: 2mm; padding: 2.5mm; gap: 2mm; }
+      .status p { font-size: 6.3pt; }
+      .status strong { font-size: 7pt; }
+      .status .years { font-size: 18pt; }
+      section:not(.hero) { padding-top: 5mm; }
+      .section-title { margin-bottom: 2.5mm; font-size: 15pt; line-height: 1; }
+      .timeline { grid-template-columns: 1.25fr 1fr 1fr; gap: 2.5mm; align-items: stretch; }
+      .job, .job:first-child { grid-row: auto; padding: 3mm; border: 1px solid var(--line); }
+      .job-head { display: block; }
+      .job h3 { font-size: 9pt; }
+      .period { display: block; margin-top: 1mm; font-size: 6pt; }
+      .role { margin: 1mm 0 2mm; font-size: 6.5pt; }
+      .job ul { margin: 0; padding-left: 3.2mm; columns: auto; }
+      .job li + li { margin-top: 1mm; }
+      .skills-layout { grid-template-columns: 38mm 1fr; gap: 2.5mm; align-items: stretch; }
+      .skill-lead { position: static; min-height: 0; padding: 3mm; }
+      .skill-lead h2 { font-size: 16pt; }
+      .skill-lead p { margin-top: 3mm; }
+      .skill-grid { grid-template-columns: repeat(2, 1fr); gap: 2mm; }
+      .skill { min-height: 0; padding: 2.5mm; border: 1px solid var(--line); }
+      .skill h3 { margin-bottom: 1mm; font-size: 8pt; }
+      .skill p, .skill code { font-size: 6.3pt; }
+      .skill:nth-child(3) { grid-column: span 2; }
+      .education { grid-template-columns: .9fr 1.1fr; gap: 2.5mm; }
+      .edu-main, .edu-note { padding: 3mm; border: 1px solid var(--line); font-size: 6.5pt; }
+      .edu-main h3 { margin-bottom: 1mm; font-size: 10pt; }
+      .edu-main p, .edu-note p { margin-top: 1mm; }
     }
   </style>
 </head>
