@@ -245,7 +245,6 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     padding: 0 !important;
   }
 
-  main > section { break-inside: auto !important; page-break-inside: auto !important; }
   h1, h2, h3 { break-after: avoid-page; page-break-after: avoid; }
   .icon-btn, .print-btn, [hidden], [aria-hidden="true"] { display: none !important; }
 
@@ -294,8 +293,8 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   }
 
   .hero-meta {
-    display: grid !important;
-    grid-template-columns: repeat(3, max-content) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
     margin-top: 3.5mm !important;
     gap: 1.5mm 4mm !important;
     font-size: 7.1pt !important;
@@ -422,8 +421,6 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     grid-template-columns: 42mm minmax(0, 1fr) !important;
     gap: 3mm !important;
     align-items: stretch !important;
-    break-inside: avoid-page;
-    page-break-inside: avoid;
   }
 
   .skill-lead {
@@ -465,8 +462,6 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     display: grid !important;
     grid-template-columns: .9fr 1.1fr !important;
     gap: 3mm !important;
-    break-inside: avoid-page;
-    page-break-inside: avoid;
   }
 
   .edu-main, .edu-note {
