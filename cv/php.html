@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV Nguyễn Thành Long - Full-stack PHP/Laravel Developer với hơn 8 năm kinh nghiệm phát triển sản phẩm web.">
+  <meta name="theme-color" content="#11120f">
+  <title>Nguyễn Thành Long | Full-stack PHP Developer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f1f0ea;
+      --surface: #faf9f5;
+      --surface-2: #e7e6df;
+      --ink: #171814;
+      --muted: #62645c;
+      --line: #c9cac1;
+      --accent: #d5522b;
+      --accent-ink: #fff9f4;
+      --radius: 14px;
+      --shadow: 0 28px 80px rgba(37, 39, 31, .12);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11120f;
+        --surface: #191a16;
+        --surface-2: #22231e;
+        --ink: #eeeee8;
+        --muted: #a9aba1;
+        --line: #383a32;
+        --accent: #e76a41;
+        --accent-ink: #17100d;
+        --shadow: 0 28px 80px rgba(0, 0, 0, .28);
+      }
+    }
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #f1f0ea; --surface: #faf9f5; --surface-2: #e7e6df; --ink: #171814;
+      --muted: #62645c; --line: #c9cac1; --accent: #d5522b; --accent-ink: #fff9f4;
+      --shadow: 0 28px 80px rgba(37, 39, 31, .12);
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #11120f; --surface: #191a16; --surface-2: #22231e; --ink: #eeeee8;
+      --muted: #a9aba1; --line: #383a32; --accent: #e76a41; --accent-ink: #17100d;
+      --shadow: 0 28px 80px rgba(0, 0, 0, .28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI Variable Display", "Aptos", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+      transition: background .25s ease, color .25s ease;
+    }
+    button, a { font: inherit; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip { position: fixed; top: 12px; left: 12px; transform: translateY(-150%); background: var(--accent); color: var(--accent-ink); padding: 10px 14px; z-index: 10; border-radius: var(--radius); }
+    .skip:focus { transform: translateY(0); }
+    .topbar {
+      position: sticky; top: 0; z-index: 5; height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1280px; margin: auto; padding: 0 28px;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+    }
+    .brand { font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .actions { display: flex; gap: 8px; }
+    .icon-btn, .print-btn {
+      min-height: 42px; border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--surface); color: var(--ink); cursor: pointer; padding: 9px 14px;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .icon-btn:hover, .print-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .icon-btn:active, .print-btn:active { transform: translateY(1px); }
+    .print-btn { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; white-space: nowrap; }
+    main { max-width: 1280px; margin: auto; padding: 44px 28px 96px; }
+    .hero {
+      min-height: calc(100dvh - 112px); display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(290px, .75fr);
+      gap: 24px; align-items: stretch;
+    }
+    .intro, .profile-panel { border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .intro { padding: clamp(32px, 6vw, 78px); display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative; }
+    .intro::after { content: "PHP"; position: absolute; right: -18px; bottom: -60px; font-weight: 900; font-size: clamp(8rem, 19vw, 18rem); letter-spacing: -.1em; color: var(--surface-2); line-height: 1; z-index: 0; }
+    .intro > * { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 30px; color: var(--accent); font: 700 .78rem/1.2 Consolas, monospace; text-transform: uppercase; letter-spacing: .16em; }
+    h1 { margin: 0; max-width: 820px; font-size: clamp(3.2rem, 7.6vw, 7.4rem); line-height: .89; letter-spacing: -.075em; font-weight: 850; }
+    h1 strong { display: block; color: var(--accent); font-weight: inherit; }
+    .summary { margin: 38px 0 0; max-width: 58ch; font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--muted); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 56px; font: 600 .82rem/1.3 Consolas, monospace; }
+    .hero-meta a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .profile-panel { padding: 22px; display: grid; grid-template-rows: 1fr auto; gap: 22px; }
+    .portrait {
+      min-height: 430px; border-radius: var(--radius); overflow: hidden; position: relative;
+      background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 72%, #653015), var(--surface-2));
+      display: grid; place-items: center;
+    }
+    .portrait::before { content: "L"; font-size: clamp(10rem, 20vw, 18rem); font-weight: 900; color: color-mix(in srgb, var(--surface) 28%, transparent); line-height: 1; }
+    .portrait-note { position: absolute; inset: auto 18px 18px; margin: 0; padding: 12px; border-radius: var(--radius); color: #fff9f4; background: rgba(22, 16, 13, .68); backdrop-filter: blur(10px); font-size: .82rem; }
+    .status { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: end; border-top: 1px solid var(--line); padding-top: 18px; }
+    .status p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .status strong { display: block; color: var(--ink); font-size: 1.06rem; }
+    .status .years { color: var(--accent); font-size: 2.7rem; line-height: .9; letter-spacing: -.08em; font-weight: 850; }
+    section:not(.hero) { padding-top: 110px; }
+    .section-title { margin: 0 0 42px; max-width: 760px; font-size: clamp(2.4rem, 5vw, 5.6rem); line-height: .96; letter-spacing: -.06em; }
+    .timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .job { background: var(--surface); border-radius: var(--radius); padding: 30px; border: 1px solid transparent; transition: transform .25s ease, border-color .25s ease; }
+    .job:first-child { grid-row: span 2; }
+    .job:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .job-head { display: flex; justify-content: space-between; gap: 24px; align-items: start; }
+    .job h3 { margin: 0; font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1.1; letter-spacing: -.035em; }
+    .period { flex: none; color: var(--accent); font: 700 .78rem/1.4 Consolas, monospace; }
+    .role { color: var(--muted); margin: 8px 0 22px; font-weight: 650; }
+    .job ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
+    .job li + li { margin-top: 10px; }
+    .skills-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 18px; align-items: start; }
+    .skill-lead { min-height: 420px; padding: 34px; border-radius: var(--radius); background: var(--accent); color: var(--accent-ink); position: sticky; top: 92px; }
+    .skill-lead h2 { margin: 0; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .92; letter-spacing: -.065em; }
+    .skill-lead p { margin: 28px 0 0; max-width: 31ch; }
+    .skill-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+    .skill { min-height: 190px; padding: 26px; border-radius: var(--radius); background: var(--surface); }
+    .skill:nth-child(3n) { background: var(--surface-2); }
+    .skill h3 { margin: 0 0 18px; font-size: 1.25rem; }
+    .skill p { margin: 0; color: var(--muted); }
+    .skill code { color: var(--accent); font: 700 .9rem Consolas, monospace; }
+    .education { display: grid; grid-template-columns: .9fr 1.1fr; gap: 18px; }
+    .edu-main, .edu-note { padding: 36px; border-radius: var(--radius); background: var(--surface); }
+    .edu-main h3 { margin: 0 0 10px; font-size: clamp(1.8rem, 3vw, 3.2rem); line-height: 1; letter-spacing: -.05em; }
+    .edu-main p, .edu-note p { color: var(--muted); margin: 10px 0 0; }
+    .edu-note { background: var(--surface-2); display: flex; align-items: end; font-size: 1.1rem; }
+    footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
+    .footer-inner { border-top: 1px solid var(--line); padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .82rem; }
+    .reveal { animation: reveal .72s cubic-bezier(.16, 1, .3, 1) both; }
+    .reveal:nth-child(2) { animation-delay: .1s; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 860px) {
+      .topbar { padding-inline: 16px; }
+      main { padding: 24px 16px 72px; }
+      .hero, .timeline, .skills-layout, .education { grid-template-columns: 1fr; min-height: auto; }
+      .intro { min-height: 640px; padding: 32px 24px; }
+      .profile-panel { grid-template-columns: .85fr 1.15fr; grid-template-rows: none; }
+      .portrait { min-height: 330px; }
+      .job:first-child { grid-row: auto; }
+      .skill-lead { min-height: auto; position: static; }
+      section:not(.hero) { padding-top: 80px; }
+    }
+    @media (max-width: 600px) {
+      .brand { max-width: 120px; line-height: 1.05; }
+      .print-btn span { display: none; }
+      .profile-panel, .skill-grid { grid-template-columns: 1fr; }
+      .portrait { min-height: 390px; }
+      .job-head { display: block; }
+      .period { display: block; margin-top: 10px; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+    @media print {
+      :root, [data-theme] { color-scheme: light; --bg: #fff; --surface: #fff; --surface-2: #f0f0ec; --ink: #111; --muted: #444; --line: #bbb; --accent: #b83c1e; --accent-ink: #fff; --shadow: none; }
+      @page { size: A4; margin: 12mm; }
+      body { font-size: 10pt; background: #fff; }
+      .topbar, .portrait-note { display: none; }
+      main { max-width: none; padding: 0; }
+      .hero { min-height: auto; grid-template-columns: 1.55fr .45fr; gap: 8mm; }
+      .intro, .profile-panel, .job, .skill, .skill-lead, .edu-main, .edu-note { box-shadow: none; break-inside: avoid; }
+      .intro { padding: 9mm; min-height: 105mm; }
+      h1 { font-size: 42pt; }
+      .summary { margin-top: 8mm; }
+      .hero-meta { margin-top: 9mm; }
+      .profile-panel { padding: 5mm; }
+      .portrait { min-height: 72mm; }
+      section:not(.hero) { padding-top: 12mm; }
+      .section-title { font-size: 26pt; margin-bottom: 6mm; }
+      .timeline { grid-template-columns: 1fr; gap: 5mm; }
+      .job { padding: 7mm; border: 1px solid var(--line); }
+      .job ul { columns: 2; column-gap: 8mm; }
+      .skills-layout { grid-template-columns: .7fr 1.3fr; }
+      .skill-lead { position: static; min-height: 0; padding: 7mm; }
+      .skill-grid { gap: 4mm; }
+      .skill { min-height: 0; padding: 6mm; }
+      footer { padding: 8mm 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Bỏ qua điều hướng</a>
+  <header class="topbar">
+    <a class="brand" href="#content" aria-label="Về đầu trang">LONG<span>.</span>DEV</a>
+    <div class="actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối" title="Đổi giao diện">◐</button>
+      <button class="print-btn" type="button" onclick="window.print()" aria-label="In hoặc lưu CV thành PDF">↧ <span>Lưu PDF</span></button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <article class="intro reveal">
+        <div>
+          <p class="eyebrow">Full-stack PHP Developer</p>
+          <h1 id="hero-title">Nguyễn Thành <strong>Long.</strong></h1>
+          <p class="summary">Tôi xây dựng hệ thống web ổn định, dễ mở rộng và giải quyết những bài toán nghiệp vụ phức tạp bằng PHP, Laravel và JavaScript.</p>
+        </div>
+        <div class="hero-meta">
+          <a href="tel:0963195861">0963 195 861</a>
+          <a href="mailto:thanhlong09041995@gmail.com">thanhlong09041995@gmail.com</a>
+          <span>Hà Nội, Việt Nam</span>
+        </div>
+      </article>
+
+      <aside class="profile-panel reveal" aria-label="Thông tin nhanh">
+        <div class="portrait" role="img" aria-label="Vị trí ảnh đại diện của Nguyễn Thành Long">
+          <p class="portrait-note">Thay vùng này bằng ảnh chân dung thật tại bước hoàn thiện.</p>
+        </div>
+        <div class="status">
+          <p><strong>Kinh nghiệm thực chiến</strong>Web application, ERP, CRM, bán hàng và quản trị nội bộ.</p>
+          <div class="years" aria-label="Hơn 8 năm kinh nghiệm">8+</div>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="experience-title">
+      <h2 class="section-title" id="experience-title">Kinh nghiệm tạo ra sản phẩm thật.</h2>
+      <div class="timeline">
+        <article class="job">
+          <div class="job-head"><h3>Công ty cổ phần 1Office</h3><span class="period">03/2022 - HIỆN TẠI</span></div>
+          <p class="role">Lập trình viên Full-stack</p>
+          <ul>
+            <li>Phát triển hệ thống quản trị doanh nghiệp toàn diện với các module lõi như HRM, CRM, tài chính, kế toán, dự án và workflow.</li>
+            <li>Thiết kế kiến trúc và tối ưu module backend bằng PHP/Laravel, đồng thời phát triển giao diện frontend với jQuery.</li>
+            <li>Xây dựng, tích hợp API nội bộ giữa các module nhằm đảm bảo dữ liệu nhất quán và hiệu suất xử lý.</li>
+            <li>Phân tích nghiệp vụ, thiết kế cơ sở dữ liệu, định hướng giải pháp kỹ thuật phù hợp yêu cầu sản phẩm.</li>
+            <li>Code review, tối ưu truy vấn và phối hợp UI/UX, QA, Product Owner để đảm bảo chất lượng triển khai.</li>
+            <li>Triển khai CI/CD, logging và tự động hóa với GitLab CI/CD, Telegram log và cronjob.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-head"><h3>Công ty cổ phần Viễn thông DTH</h3><span class="period">04/2020 - 02/2022</span></div>
+          <p class="role">Lập trình viên Full-stack</p>
+          <ul>
+            <li>Phụ trách vòng đời hệ thống bán hàng sim từ kiến trúc, backend API, frontend đến triển khai.</li>
+            <li>Đề xuất giải pháp tối ưu hiệu suất, quản lý dữ liệu ổn định và xây dựng tính năng theo chiến dịch bán hàng.</li>
+            <li>Dự án tiêu biểu: Websim.vn và Dự án Sim.vn.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-head"><h3>Công ty cổ phần VNP Group</h3><span class="period">06/2017 - 03/2020</span></div>
+          <p class="role">Frontend Developer, sau đó Full-stack và Team Lead</p>
+          <ul>
+            <li>Phát triển hệ thống quản trị nội bộ và website thương mại điện tử bằng PHP, MongoDB, Elasticsearch, Bootstrap và JavaScript.</li>
+            <li>Thiết kế cơ sở dữ liệu, tối ưu luồng nghiệp vụ và hướng dẫn thành viên trong quá trình phát triển.</li>
+            <li>Dự án tiêu biểu: Trip247.net, WeMarry.vn và Vpage.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills-layout" aria-labelledby="skills-title">
+      <div class="skill-lead">
+        <h2 id="skills-title">Năng lực cốt lõi.</h2>
+        <p>Tập trung vào kiến trúc backend vững chắc, dữ liệu hiệu quả và trải nghiệm frontend rõ ràng.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill"><h3>Backend</h3><p><code>PHP / Laravel</code><br>Thiết kế module, REST API, authentication, queue, cronjob và tích hợp hệ thống.</p></article>
+        <article class="skill"><h3>Frontend</h3><p><code>HTML5 / CSS3 / JavaScript</code><br>jQuery, Bootstrap, Sass, Less và WordPress.</p></article>
+        <article class="skill"><h3>Data</h3><p><code>MySQL / MongoDB</code><br>NoSQL, Elasticsearch, Redis và Memcached.</p></article>
+        <article class="skill"><h3>Engineering</h3><p><code>OOP / Design Patterns</code><br>Code review, tối ưu hiệu suất, Git, GitLab và CI/CD.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Nền tảng học vấn.</h2>
+      <div class="education">
+        <article class="edu-main">
+          <h3>Đại học Kinh doanh và Công nghệ Hà Nội</h3>
+          <p>Công nghệ Thông tin, 2014 - 2018</p>
+        </article>
+        <aside class="edu-note">
+          <p>Đào tạo chuyên sâu về lập trình hướng đối tượng, cơ sở dữ liệu, mạng máy tính và phát triển phần mềm. Đây là nền tảng cho định hướng Full-stack Developer sau này.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><span>Nguyễn Thành Long, Full-stack PHP Developer</span><span>Hà Nội, Việt Nam</span></div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const button = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('cv-theme');
+      if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
+      button.addEventListener('click', () => {
+        const current = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        localStorage.setItem('cv-theme', next);
+      });
+    })();
+  </script>
+</body>
+</html>
