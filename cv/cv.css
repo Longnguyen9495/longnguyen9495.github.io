@@ -482,4 +482,102 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
 
   .edu-main h3 { margin: 0 0 1mm !important; font-size: 9.2pt !important; line-height: 1.15 !important; letter-spacing: -.015em !important; }
   .edu-main p, .edu-note p { margin: 0 !important; }
+
+  /* A4 optical balance: readable type and an evenly filled single page. */
+  @page { margin: 8mm 10mm; }
+
+  body {
+    font-size: 8.2pt;
+    line-height: 1.32;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 33mm !important;
+    gap: 5mm !important;
+  }
+
+  .eyebrow {
+    margin-bottom: 2mm !important;
+    font-size: 7.2pt !important;
+  }
+
+  h1 { font-size: 27pt !important; }
+
+  .summary {
+    margin-top: 2.2mm !important;
+    font-size: 8.1pt !important;
+    line-height: 1.34 !important;
+  }
+
+  .hero-meta {
+    margin-top: 2.2mm !important;
+    gap: 1.2mm 4mm !important;
+    font-size: 7.3pt !important;
+  }
+
+  .profile-panel { gap: 2mm !important; }
+
+  .portrait,
+  .portrait img {
+    width: 33mm !important;
+    height: 33mm !important;
+  }
+
+  .portrait { min-height: 33mm !important; }
+
+  .status {
+    padding: 2.6mm !important;
+    gap: 1.6mm !important;
+  }
+
+  .status p { font-size: 7.1pt !important; line-height: 1.3 !important; }
+  .status strong { font-size: 7.8pt !important; }
+
+  section:not(.hero) { padding-top: 4.2mm !important; }
+
+  .section-title {
+    margin-bottom: 2.3mm !important;
+    font-size: 14pt !important;
+  }
+
+  .timeline { gap: 2mm !important; }
+
+  .job,
+  .job:first-child { padding: 2.5mm 3mm !important; }
+
+  .job h3 { font-size: 9.7pt !important; }
+  .period { font-size: 7.3pt !important; }
+
+  .role {
+    margin: .7mm 0 1.2mm !important;
+    font-size: 8.4pt !important;
+  }
+
+  .job li { line-height: 1.3 !important; }
+  .job li + li { margin-top: .65mm !important; }
+
+  .skills-layout {
+    grid-template-columns: 40mm minmax(0, 1fr) !important;
+    gap: 2mm !important;
+  }
+
+  .skill-lead { padding: 3mm !important; }
+  .skill-lead h2 { font-size: 15pt !important; }
+  .skill-lead p { font-size: 7.3pt !important; }
+  .skill-grid { gap: 1.7mm !important; }
+  .skill { padding: 2.2mm !important; }
+  .skill h3 { font-size: 8.5pt !important; }
+  .skill p,
+  .skill code { font-size: 7.1pt !important; line-height: 1.25 !important; }
+
+  .education { gap: 3.5mm !important; }
+
+  .edu-main,
+  .edu-note {
+    padding: 2.6mm !important;
+    font-size: 7.5pt !important;
+    line-height: 1.3 !important;
+  }
+
+  .edu-main h3 { font-size: 9.8pt !important; }
 }
