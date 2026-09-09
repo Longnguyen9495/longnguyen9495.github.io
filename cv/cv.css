@@ -217,7 +217,7 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     --shadow: none;
   }
 
-  @page { size: A4 portrait; margin: 8mm 9mm; }
+  @page { size: A4 portrait; margin: 6mm 8mm; }
 
   html, body {
     width: auto !important;
@@ -230,8 +230,8 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   html { scroll-behavior: auto; }
 
   body {
-    font-size: 8pt;
-    line-height: 1.32;
+    font-size: 7.4pt;
+    line-height: 1.22;
     letter-spacing: 0;
     background-image: none !important;
     print-color-adjust: exact;
@@ -254,8 +254,8 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   .hero {
     display: grid !important;
     min-height: 0 !important;
-    grid-template-columns: minmax(0, 1fr) 32mm !important;
-    gap: 4mm !important;
+    grid-template-columns: minmax(0, 1fr) 28mm !important;
+    gap: 3mm !important;
     align-items: center !important;
     break-inside: avoid-page;
     page-break-inside: avoid;
@@ -283,22 +283,22 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   h1 {
     max-width: none !important;
     margin: 0 !important;
-    font-size: 24pt !important;
+    font-size: 22pt !important;
     line-height: .96 !important;
     letter-spacing: -.04em !important;
   }
 
   .summary {
     max-width: 78ch !important;
-    margin: 2mm 0 0 !important;
-    font-size: 7.8pt !important;
-    line-height: 1.3 !important;
+    margin: 1.4mm 0 0 !important;
+    font-size: 7.2pt !important;
+    line-height: 1.22 !important;
   }
 
   .hero-meta {
     display: flex !important;
     flex-wrap: wrap !important;
-    margin-top: 2.5mm !important;
+    margin-top: 1.5mm !important;
     gap: 1mm 3mm !important;
     font-size: 6.7pt !important;
     line-height: 1.2 !important;
@@ -317,9 +317,9 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   .portrait {
     display: block !important;
     position: relative !important;
-    width: 32mm !important;
-    height: 32mm !important;
-    min-height: 32mm !important;
+    width: 28mm !important;
+    height: 28mm !important;
+    min-height: 28mm !important;
     aspect-ratio: 1 / 1 !important;
     overflow: hidden !important;
     border: .3mm solid var(--line) !important;
@@ -330,8 +330,8 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     visibility: visible !important;
     position: absolute !important;
     inset: 0 !important;
-    width: 32mm !important;
-    height: 32mm !important;
+    width: 28mm !important;
+    height: 28mm !important;
     max-width: none !important;
     object-fit: cover !important;
     object-position: 58% 50% !important;
@@ -345,7 +345,7 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     grid-template-columns: 1fr auto !important;
     margin: 0 !important;
     padding: 2.2mm !important;
-    gap: 2mm !important;
+    gap: 1.3mm !important;
     border: .25mm solid var(--line) !important;
     border-radius: 1.5mm !important;
   }
@@ -354,12 +354,12 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   .status strong { font-size: 7.2pt !important; line-height: 1.2 !important; }
   .status .years { font-size: 18pt !important; line-height: .9 !important; }
 
-  section:not(.hero) { padding-top: 6mm !important; }
+  section:not(.hero) { padding-top: 3.5mm !important; }
 
   .section-title {
     max-width: none !important;
-    margin: 0 0 3mm !important;
-    font-size: 16pt !important;
+    margin: 0 0 1.8mm !important;
+    font-size: 13pt !important;
     line-height: 1.04 !important;
     letter-spacing: -.03em !important;
   }
@@ -367,14 +367,14 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   .timeline {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 3mm !important;
+    gap: 1.6mm !important;
     align-items: stretch !important;
   }
 
   .job, .job:first-child {
     display: block !important;
     grid-row: auto !important;
-    padding: 3.2mm 3.5mm !important;
+    padding: 2mm 2.5mm !important;
     border: .25mm solid var(--line) !important;
     border-radius: 1.5mm !important;
     break-inside: avoid-page;
@@ -390,7 +390,7 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
 
   .job h3 {
     margin: 0 !important;
-    font-size: 10.5pt !important;
+    font-size: 9.2pt !important;
     line-height: 1.2 !important;
     letter-spacing: -.01em !important;
   }
@@ -404,7 +404,7 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   }
 
   .role {
-    margin: 1mm 0 1.8mm !important;
+    margin: .5mm 0 1mm !important;
     font-size: 8pt !important;
     line-height: 1.25 !important;
   }
@@ -416,41 +416,41 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
     color: var(--muted) !important;
   }
 
-  .job li { break-inside: avoid-page; page-break-inside: avoid; line-height: 1.35 !important; }
-  .job li + li { margin-top: 1.1mm !important; }
+  .job li { break-inside: avoid-page; page-break-inside: avoid; line-height: 1.22 !important; }
+  .job li + li { margin-top: .55mm !important; }
 
   .skills-layout {
     display: grid !important;
-    grid-template-columns: 42mm minmax(0, 1fr) !important;
-    gap: 3mm !important;
+    grid-template-columns: 36mm minmax(0, 1fr) !important;
+    gap: 1.6mm !important;
     align-items: stretch !important;
   }
 
   .skill-lead {
     position: static !important;
     min-height: 0 !important;
-    padding: 3.5mm !important;
+    padding: 2.5mm !important;
     border-radius: 1.5mm !important;
   }
 
   .skill-lead h2 {
     margin: 0 !important;
-    font-size: 17pt !important;
+    font-size: 14pt !important;
     line-height: .98 !important;
     letter-spacing: -.035em !important;
   }
 
-  .skill-lead p { margin: 2.5mm 0 0 !important; font-size: 7.2pt !important; line-height: 1.35 !important; }
+  .skill-lead p { margin: 1.5mm 0 0 !important; font-size: 6.8pt !important; line-height: 1.35 !important; }
 
   .skill-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 2mm !important;
+    gap: 1.3mm !important;
   }
 
   .skill {
     min-height: 0 !important;
-    padding: 2.8mm !important;
+    padding: 1.8mm !important;
     border: .25mm solid var(--line) !important;
     border-radius: 1.5mm !important;
     break-inside: avoid-page;
@@ -458,26 +458,28 @@ footer { max-width: 1280px; margin: auto; padding: 0 28px 44px; }
   }
 
   .skill:nth-child(3) { grid-column: span 2 !important; }
-  .skill h3 { margin: 0 0 1mm !important; font-size: 8.6pt !important; line-height: 1.15 !important; letter-spacing: -.01em !important; }
-  .skill p, .skill code { font-size: 7.1pt !important; line-height: 1.32 !important; }
+  .skill h3 { margin: 0 0 .5mm !important; font-size: 8pt !important; line-height: 1.15 !important; letter-spacing: -.01em !important; }
+  .skill p, .skill code { font-size: 6.6pt !important; line-height: 1.2 !important; }
 
   .education {
     display: grid !important;
     grid-template-columns: .9fr 1.1fr !important;
     gap: 3mm !important;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .edu-main, .edu-note {
     display: block !important;
-    padding: 3.2mm !important;
+    padding: 2mm !important;
     border: .25mm solid var(--line) !important;
     border-radius: 1.5mm !important;
-    font-size: 8pt !important;
-    line-height: 1.35 !important;
+    font-size: 7pt !important;
+    line-height: 1.2 !important;
     break-inside: avoid-page;
     page-break-inside: avoid;
   }
 
-  .edu-main h3 { margin: 0 0 1mm !important; font-size: 10.5pt !important; line-height: 1.15 !important; letter-spacing: -.015em !important; }
+  .edu-main h3 { margin: 0 0 1mm !important; font-size: 9.2pt !important; line-height: 1.15 !important; letter-spacing: -.015em !important; }
   .edu-main p, .edu-note p { margin: 0 !important; }
 }
