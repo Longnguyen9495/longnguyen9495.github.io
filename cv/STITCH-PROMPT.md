@@ -55,8 +55,8 @@ Hero vừa trọn viewport đầu tiên, dùng grid khoảng 65/35.
 
 Khối trái:
 - Eyebrow duy nhất của hero: `FULL-STACK PHP DEVELOPER`.
-- Headline lớn tối đa 2 dòng: `Nguyễn Thành Long.`
-- Tô Signal Orange cho từ `Long.` nhưng không dùng gradient.
+- Headline lớn tối đa 2 dòng: `Nguyễn Thành Long`
+- Tô Signal Orange cho từ `Long` nhưng không dùng gradient.
 - Mô tả ngắn: `Tôi xây dựng hệ thống web ổn định, dễ mở rộng bằng PHP, Laravel và JavaScript, kết hợp AI hiện đại để tăng tốc toàn bộ vòng đời phát triển phần mềm.`
 - Thông tin liên hệ dạng text rõ ràng: `0963 195 861`, `thanhlong09041995@gmail.com`, `Hà Nội, Việt Nam`.
 
